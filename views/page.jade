@@ -1,0 +1,22 @@
+mixin slides(slides)
+    div ghjklkjhgfghjkllkjhgfghj
+    //each slide in slides
+    //    div !{slide.fieldset}
+
+
+head
+    title !{doc.getText("page.title")}
+
+
+
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    //!= templateRender('./page/slides.jade', "fares")
+    //$_import('./page/slides.jade')
+
+    each slice in slices
+         + !{slice.sliceType + '(' + slice.value + ')'}
+         //+ !{"slides" + '(' + slice.value + ')'}
+
+
+
+block body
