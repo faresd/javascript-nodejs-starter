@@ -3,13 +3,12 @@ var prismic = require('../prismic-helpers');
 // -- Display all documents
 
 exports.index = prismic.route(function(req, res, ctx) {
-  //console.log(req, "req")
-  //ctx.api.form('everything').set("page", req.param('page') || "1").ref(ctx.ref).submit(function(err, docs) {
-  //  if (err) { prismic.onPrismicError(err, req, res); return; }
-  //  res.render('index', {
-  //    docs: docs
-  //  });
-  //});
+  ctx.api.form('everything').set("page", req.param('page') || "1").ref(ctx.ref).submit(function(err, docs) {
+    if (err) { prismic.onPrismicError(err, req, res); return; }
+    res.render('index', {
+      docs: docs
+    });
+  });
 });
 
 // -- Display a given document
@@ -34,13 +33,6 @@ exports.detail = prismic.route(function(req, res, ctx) {
     }
   );
 });
-//function Slice (fragment) {
-//  this.sliceType = fragment.sliceType
-//  this.sliceLabel = fragment.label
-//  this.fragment = fragment.value
-//  this.get
-//
-//}
 
 exports.page = prismic.route(function(req, res, ctx) {
   var id = req.params['uid']

@@ -1,4 +1,4 @@
-mixin featured-items(slice)
+mixin featuredItems(slice)
     ul#list
         each slide in slice.toArray()
             li !{slide.get("illustration").getView("main").url}

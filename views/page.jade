@@ -16,5 +16,5 @@ head
         for slice in slices
             if slice != undefined
                 li#slice
-                    +#{slice.sliceType}(slice.value)
+                    +#{slice.sliceType.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })}(slice.value)
 block body
