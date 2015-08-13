@@ -1,5 +1,5 @@
-mixin slides(slice)
+mixin section-header(slice)
     ul#list
-        each slide in slice.toArray()
-            //div(style='background-image: url(' + slide.get("illustration").getView("main").url + ');')
-            li !{JSON.stringify(slide.get("illustration").getView("main").url)}
+        each sectionHeader in slice.toArray()
+            div section-header
+                li !{sectionHeader.get("title").getTitle().text}
