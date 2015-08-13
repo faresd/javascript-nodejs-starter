@@ -48,30 +48,10 @@ exports.page = prismic.route(function(req, res, ctx) {
     .query('[[:d = at(my.page.uid,"' + id + '")]]').submit(function(err, docs) {
       if (err) { prismic.onPrismicError(err, req, res); return; }
       var slices =  docs.results[0].getSliceZone("page.body").value
-      //    .forEach(function(slice) {
-        //    })
-
-        var arrObj = []
-        arrObj.push({"sliceType":"slides('blaa', 333333)"})
-      //  //console.log(JSON.stringify(slice.value), "slice.value")
-      //  console.log(slice, "slice.value")
-      //})
-      //sliceFragments.forEach(function(sliceFragment) {
-      //  sliceFragment.get
-      //})
-      //console.log(docs.results[0].getSliceZone("page.body").value, "slicedwwwiiiuiuiuiuiiuiuiuiuiuiuiuiuiu")
-
-      //
-      //    .forEach(function(sliceFragment) {
-      //
-      //  //var slice = Slice(sliceFragment.Type, sliceFragment.label, sliceFragment.value)
-      //  console.log(sliceFragment, "slice.value")
-      //});
 
       res.render('page', {
         doc: docs.results[0],
         slices: slices
-        //sliceFragments: sliceFragments
       });
     })
 });
