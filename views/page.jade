@@ -1,20 +1,26 @@
 // To add a new slice type template should include the .jade template that has a Mixin that has same camelcased name.
 
 include ./page/slides.jade
+include ./page/slides-small.jade
 include ./page/separator.jade
 include ./page/featured-items.jade
-include ./page/section-header.jade
 include ./page/section-header.jade
 include ./page/text.jade
 include ./page/alternated-highlights.jade
 include ./page/faq.jade
+include ./page/contact-us.jade
 
 head
     title !{doc.getText("page.title")}
     link(rel="stylesheet", href="/stylesheets/style.css")
+block body
     ul#list
         for slice in slices
-            if slice != undefined
+            if slice.sliceType != undefined
+                - var labeledFileExists = helpers.fs.existsSync(helpers.path.resolve('views/page/' + slice.sliceType + '-' + slice.label + '.jade'))
+                - var mixinWithLabel = helpers.toCamelcase(slice.sliceType + '-' + slice.label)
+                - var mixinName = (labeledFileExists ? mixinWithLabel : helpers.toCamelcase(slice.sliceType))
+
                 li#slice
-                    +#{slice.sliceType.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })}(slice.value)
-block body
+                    // Building mixin camelcased name.
+                    +#{mixinName}(slice.value)

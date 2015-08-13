@@ -1,0 +1,5 @@
+mixin contactUs(slice)
+    ul#list
+        each contactUs in slice.toArray()
+            div contactUs
+                li !{contactUs.get("mailto").asText()}
