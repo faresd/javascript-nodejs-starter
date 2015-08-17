@@ -1,2 +1,2 @@
 mixin separator(slice)
-    hr(class="separatore#{slice.label}")
+    hr(class="separator#{slice.label? ' ' + slice.label : '' }")

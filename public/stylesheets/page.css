@@ -214,6 +214,20 @@ body {
   width: 100%;
 }
 
+hr.separator {
+  border: none;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+/*hr.separator.medium {*/
+  /*height: 50px;*/
+/*}*/
+
+/*hr.separator.small {*/
+  /*height: 35px;*/
+/*}*/
 
 @media (max-width: 767px) {
   .slides.small h1 {
