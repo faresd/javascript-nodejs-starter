@@ -1,5 +1,2 @@
 mixin separator(slice)
-    ul#list
-        each separator in slice.value.toArray()
-            div Separator
-                li !{separator.get("sep")}
+    hr(class="separatore#{slice.label}")
