@@ -1,5 +1,5 @@
 mixin text(slice)
     ul#list
-        each text in slice.toArray()
+        each text in slice.value.toArray()
             div TEXT
                 li !{text.get("content").getFirstParagraph().text}

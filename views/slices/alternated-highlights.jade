@@ -1,5 +1,5 @@
 mixin alternatedHighlights(slice)
     ul#list
-        each alternatedHighlights in slice.toArray()
+        each alternatedHighlights in slice.value.toArray()
             div alternated-highlights
                 li !{alternatedHighlights.get("illustration").getView("main").url}

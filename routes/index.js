@@ -46,10 +46,6 @@ exports.page = prismic.route(function(req, res, ctx) {
       var slices =  docs.results[0].getSliceZone("page.body").value
       var fs = require('fs')
       var path = require('path')
-      console.log(path.resolve('views/page.jade'))
-      console.log(fs.existsSync(path.resolve('views/page.jade')))
-      console.log(fs.existsSync('/Volumes/Work/Projects/javascript-nodejs-starter/views/page.jade'), "existsexistsexistsexistsexistsexistsexistsexistsexistsexistsexistsexistsexistsexists")
-
 
       res.render('page', {
         doc: docs.results[0],

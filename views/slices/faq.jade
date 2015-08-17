@@ -1,5 +1,5 @@
 mixin faq(slice)
     ul#list
-        each faq in slice.toArray()
+        each faq in slice.value.toArray()
             div FAQ
                 li !{faq.get("question").getTitle().text}
