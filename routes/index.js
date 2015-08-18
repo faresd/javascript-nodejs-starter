@@ -38,22 +38,27 @@ function toCamelcase(name) {
   return name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase()})
 };
 
+function buildMixinName(sliceType, sliceLabel) {
+  var fs = require('fs')
+  var path = require('path')
+  var labeledFileExists = fs.existsSync(path.resolve('views/slices/' + sliceType + '-' + sliceLabel + '.jade'))
+  var mixinWithLabel = toCamelcase(sliceType + '-' + sliceLabel)
+  var mixinName = (labeledFileExists ? mixinWithLabel : toCamelcase(sliceType))
+  return mixinName;
+
+}
+
 exports.page = prismic.route(function(req, res, ctx) {
   var id = req.params['uid']
   ctx.api.forms('everything').ref(ctx.ref)
     .query('[[:d = at(my.page.uid,"' + id + '")]]').submit(function(err, docs) {
       if (err) { prismic.onPrismicError(err, req, res); return; }
       var slices =  docs.results[0].getSliceZone("page.body").value
-      var fs = require('fs')
-      var path = require('path')
-
       res.render('page', {
         doc: docs.results[0],
         slices: slices,
         helpers: {
-          fs:fs,
-          path:path,
-          toCamelcase:toCamelcase
+          buildMixinName:buildMixinName
         }
 
       });

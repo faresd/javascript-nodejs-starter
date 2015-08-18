@@ -15,6 +15,7 @@ head
     link(rel="stylesheet", href="/stylesheets/reset.css")
     link(rel="stylesheet", href="/stylesheets/main.css")
     link(rel="stylesheet", href="/stylesheets/page.css")
+    link(rel="stylesheet", href="/stylesheets/font.css")
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
     script(src="/javascripts/vendor/jquery-1.11.2.min.js")
@@ -25,8 +26,5 @@ body.page
         div#page-content
             for slice in slices
                 if slice.sliceType != undefined
-                    - var labeledFileExists = helpers.fs.existsSync(helpers.path.resolve('views/slices/' + slice.sliceType + '-' + slice.label + '.jade'))
-                    - var mixinWithLabel = helpers.toCamelcase(slice.sliceType + '-' + slice.label)
-                    - var mixinName = (labeledFileExists ? mixinWithLabel : helpers.toCamelcase(slice.sliceType))
-                    // Building mixin camelcased name.
-                    +#{mixinName}(slice)
+                    // Find the right mixin for a slice type and label.
+                    +#{helpers.buildMixinName(slice.sliceType, slice.label)}(slice)
