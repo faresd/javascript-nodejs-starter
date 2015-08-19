@@ -323,6 +323,14 @@ hr.separator {
   /*background-size: cover;*/
 /*}*/
 
+/* faq */
+
+.faq h3 {
+  border-bottom: 1px solid #D6D6D6;
+  margin-top: 2em;
+  padding-bottom: 1em;
+}
+
 
 
 @media (max-width: 767px) {
@@ -517,6 +525,11 @@ hr.separator {
     /*-ms-transform: translate(-50%, -50%);*/
     /*transform: translate(-50%, -50%);*/
   /*}*/
+
+  .faq .col-2 {
+    width: 46%;
+    margin: 2%;
+  }
 }
 
 

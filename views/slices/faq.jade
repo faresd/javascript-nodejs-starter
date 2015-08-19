@@ -1,5 +1,9 @@
 mixin faq(slice)
-    ul#list
+    - var flexContainer = slice.label ? " flex-container" : ""
+    div(class= "row-centered-aired faq" + flexContainer)
+        - var opentag = false;
+        - var items = slice.value.toArray()
         each faq in slice.value.toArray()
-            div FAQ
-                li !{faq.get("question").getTitle().text}
+            div(class= slice.label)
+                h3 !{faq.get('question') ? faq.get('question').asText() : 'Empty'}
+                !{faq.get('answer') ? faq.get('answer').asText() : 'Empty'}
