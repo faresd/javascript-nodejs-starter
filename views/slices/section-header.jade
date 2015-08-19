@@ -1,5 +1,3 @@
 mixin sectionHeader(slice)
-    ul#list
-        each sectionHeader in slice.value.toArray()
-            div section-header
-                li !{sectionHeader.get("title").getTitle().text}
+    div.row-centered-aired.section-header !{slice.label}
+        !{slice.value.asHtml()}
