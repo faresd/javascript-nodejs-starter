@@ -544,9 +544,9 @@ hr.separator {
   /*}*/
   /**/
 
-  /*.alternated-highlights .col-2:last-child .illustration, .alternated-highlights .col-2:last-child .text-wrapper {*/
-    /*right: 0;*/
-  /*}*/
+  .alternated-highlights .col-2:last-child .illustration, .alternated-highlights .col-2:last-child .text-wrapper {
+    right: 0;
+  }
 
   /*.alternated-highlights-full .text-wrapper {*/
     /*width: 60%;*/

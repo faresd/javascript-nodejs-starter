@@ -19,7 +19,6 @@ $(document).ready(function () {
         }
 
         function next(e) {
-            console.log(e,"in next")
             e.preventDefault();
             var $slides = $(this).parent('.slides');
 
@@ -46,9 +45,61 @@ $(document).ready(function () {
         //    image.src = url;
         //
         //});
-        console.log($('.slides .arrow-next'), "arrow-next")
         $('.slides .arrow-prev').on('click', previous);
         $('.slides .arrow-next').on('click', next);
 
     })();
+
+    (function Map() {
+
+        $('.contact-us .map').each(function() {
+
+            var mapEl = this,
+                $map = $(mapEl),
+                address = $map.data('address');
+
+            if(address) {
+
+                new google.maps.Geocoder().geocode({address: address}, function(results, status) {
+
+                    if(results && results[0]) {
+
+                        var location = results[0].geometry.location;
+                        var map = new google.maps.Map(mapEl, {
+                            center: location,
+                            zoom: 16,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        });
+
+                        map.setOptions({styles: [
+                            {
+                                "featureType": "poi",
+                                "stylers": [
+                                    { "saturation": -100 },
+                                    { "visibility": "off" }
+                                ]
+                            },{
+                                "stylers": [
+                                    { "saturation": -100 }
+                                ]
+                            }
+                        ]});
+
+
+                        var marker = new google.maps.Marker({
+                            position: location,
+                            map: map
+                        });
+
+                    }
+
+                });
+
+            }
+
+        });
+
+
+    })();
+
 })
