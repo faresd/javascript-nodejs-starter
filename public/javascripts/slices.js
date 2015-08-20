@@ -61,10 +61,10 @@ $(document).ready(function () {
 
         $('.featured-preview [data-paneid]').on('mouseenter', select);
         $('.featured-preview [data-paneid]').first().map(select);
-    })()
+    })();
 
 
-        (function Map() {
+    (function Map() {
 
         $('.contact-us .map').each(function() {
 
