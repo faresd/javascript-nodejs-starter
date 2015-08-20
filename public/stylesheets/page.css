@@ -293,6 +293,58 @@ hr.separator {
 }
 
 
+
+/* Featured item preview */
+
+.featured-preview {
+  background: #F3F3F9;
+  position: relative;
+}
+
+.featured-preview li {
+  min-height: 120px;
+  position: relative;
+  padding: 1rem 1rem 1rem 6rem;
+}
+
+.featured-preview li:hover {
+  background: #e9e9f5;
+}
+
+.featured-preview li:hover .illustration {
+  border: none;
+}
+
+.featured-preview .illustration {
+  position: absolute;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.featured-preview .preview-pane {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.featured-preview .preview-pane .preview-image {
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  background-size: cover !important;
+  height: 100%;
+  width: 100%;
+}
+
+
 /*.section-header.section-header-centered p,.section-header.section-header-centered h2 {*/
   /*text-align: center;*/
 /*}*/
