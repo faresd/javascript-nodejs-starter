@@ -1,4 +1,4 @@
-mixin alternatedHighlights(slice)
+mixin alternatedHighlightsFull(slice)
     mixin button(url, content)
         if url
             a.button(href= url) !{content}
@@ -12,16 +12,15 @@ mixin alternatedHighlights(slice)
             - var illustration = alternatedHighlight.get("illustration")? alternatedHighlight.get("illustration").getView("main") : null
             - var altClass = odd ? "alternate" : ""
             div(class= altClass)
-                div.row-centered.alternated-highlights.flex-container
+                div.alternated-highlights-full.flex-container
                     if !odd
-                        div.col-2
+                        div.col-illustration
                             - var backgroundStyle = 'background-image: url(' + illustration.url + ');'
-                            div.illustration.squared-image(style=backgroundStyle ? backgroundStyle : '')
-                    div.col-2
+                            div.illustration.image(style=backgroundStyle ? backgroundStyle : '')
+                    div.col-text
                         div.text-wrapper
-                            h2 !{alternatedHighlight.get('title') ? alternatedHighlight.get('title').asText() : 'No title'}
-                            if alternatedHighlight.get('summary')
-                                !{alternatedHighlight.get('summary').asHtml()}
+                            h2 !{alternatedHighlight.get('title') ? alternatedHighlight.get('title').asText() : ''}
+                            !{alternatedHighlight.get('summary') ? alternatedHighlight.get('summary').asHtml() : ''}
                             - var readMore = alternatedHighlight.get('read-more')
                             - var readMoreLabel = alternatedHighlight.get('read-more-label')
                             if readMoreLabel
@@ -29,9 +28,9 @@ mixin alternatedHighlights(slice)
                                 - var content = readMoreLabel ? readMoreLabel.asText() : ''
                                 + button(url, content)
                     if odd
-                        div.col-2
+                        div.col-illustration
                             - var backgroundStyle = 'background-image: url(' + illustration.url + ');'
-                            div.illustration.squared-image(style=backgroundStyle ? backgroundStyle : '')
+                            div.illustration.image(style=backgroundStyle ? backgroundStyle : '')
             - index = index + 1;
 
 

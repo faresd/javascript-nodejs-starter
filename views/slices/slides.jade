@@ -13,7 +13,8 @@ mixin slides(slice)
             div(class="slide#{activeSlide}")(style='background-image: url(' + illustrationUrl + ');')
                 div.slide-container !{slide.get('title') ? slide.get('title').asHtml() : ''} !{slide.get('summary') ? slide.get('summary').asHtml() : ''}
                     if readMoreLabel
-                        a.button(href='') button_to_fix
+                        - var url = readMore ? ctx.linkResolver(readMore) : null
+                        a.button(href=url) button
                 - index = index + 1;
         if(slides.length > 1)
             a(href='#').arrow-next &nbsp;
