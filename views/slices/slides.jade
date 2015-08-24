@@ -1,5 +1,5 @@
 mixin slides(slice)
-    div.slides
+    div(class = "slides #{slice.label}")
         - var slides = slice.value.toArray()
         if(slides.length > 1)
             a(href='#').arrow-prev &nbsp;
