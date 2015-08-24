@@ -12,6 +12,7 @@ exports.Configuration = {
   // -- Links resolution rules
   linkResolver: function(doc) {
     if (doc.isBroken) return false;
+    if (doc.type == "page") return "/website-starter-sample-page"
     return '/documents/' + doc.id + '/' + doc.slug;
   },
 

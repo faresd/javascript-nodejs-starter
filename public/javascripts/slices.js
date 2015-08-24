@@ -36,15 +36,15 @@ $(document).ready(function () {
 
         // Preload image
 
-        //$('.slides [data-illustration]').each(function() {
-        //
-        //    var url = $(this).data('illustration');
-        //
-        //    var image = new Image();
-        //
-        //    image.src = url;
-        //
-        //});
+        $('.slides [data-illustration]').each(function() {
+
+            var url = $(this).data('illustration');
+
+            var image = new Image();
+
+            image.src = url;
+
+        });
         $('.slides .arrow-prev').on('click', previous);
         $('.slides .arrow-next').on('click', next);
 

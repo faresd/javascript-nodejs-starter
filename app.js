@@ -34,9 +34,8 @@ app.use(errorHandler());
 // Routes
 app.route('/').get(routes.index);
 app.route('/documents/:id/:slug').get(routes.detail);
-app.route('/:uid').get(routes.page);
-app.route('/search').get(routes.search);
 app.route('/preview').get(routes.preview);
+app.route('/:uid').get(routes.page);
 
 var PORT = app.get('port');
 
