@@ -53,15 +53,17 @@ exports.page = prismic.route(function(req, res, ctx) {
   ctx.api.forms('everything').ref(ctx.ref)
     .query('[[:d = at(my.page.uid,"' + id + '")]]').submit(function(err, docs) {
       if (err) { prismic.onPrismicError(err, req, res); return; }
-      var slices =  docs.results[0].getSliceZone("page.body").value
-      res.render('page', {
-        doc: docs.results[0],
-        slices: slices,
-        helpers: {
-          buildMixinName:buildMixinName
-        }
+        if (docs.results[0].uid == id) {
+          var slices =  docs.results[0].getSliceZone("page.body").value
+          res.render('page', {
+            doc: docs.results[0],
+            slices: slices,
+            helpers: {
+              buildMixinName:buildMixinName
+            }
 
-      });
+          });
+        } else res.redirect(("/" + docs.results[0].uid))
     })
 });
 
