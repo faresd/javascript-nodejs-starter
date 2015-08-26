@@ -35,10 +35,6 @@ body {
 }
 
 
-/*img {*/
-  /*display: block;*/
-/*}*/
-
 a {
   color: #5154aa
 }
@@ -104,7 +100,6 @@ li.col-2, li.col-3 {
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
   background-size: cover;
-  /*padding: 10px 20px;*/
   position: absolute;
   height: 100%;
   width: 100%;
@@ -577,13 +572,6 @@ hr.separator.small {
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
 
-  /*.main .alternated-highlights .col-2, .main .alternated-highlights-full .col-text, .main .alternated-highlights-full .col-illustration {*/
-    /*height: 512px;*/
-  /*}*/
-
-  /*.main .alternated-highlights, .alternated-highlights-full {*/
-    /*height: 512px;*/
-  /*}*/
 
   .main .slides {
     height: 1024px;
@@ -600,13 +588,6 @@ hr.separator.small {
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
 
-  /*.main .alternated-highlights .col-2, .main .alternated-highlights-full .col-text, .main .alternated-highlights-full .col-illustration {*/
-    /*height: 384px;*/
-  /*}*/
-
-  /*.main .alternated-highlights, .alternated-highlights-full {*/
-    /*height: 384px;*/
-  /*}*/
 
   .main .slides {
     height: 768px;
@@ -673,9 +654,9 @@ hr.separator.small {
   }
 
 
-  /*html.ie .row-centered, html.ie .flex-container .row-centered-aired {*/
-    /*overflow: hidden;*/
-  /*}*/
+  html.ie .row-centered, html.ie .flex-container .row-centered-aired {
+    overflow: hidden;
+  }
 
   .col-1 {
     width: 100%;
