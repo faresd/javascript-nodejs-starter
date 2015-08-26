@@ -26,23 +26,28 @@ function buildMixinName(sliceType, sliceLabel) {
 
 }
 
+function getPage(uid, ctx, res, callback) {
+  ctx.api.forms('everything').ref(ctx.ref)
+      .query('[[:d = at(my.page.uid,"' + uid + '")]]').submit(function(err, docs) {
+        if (err) { prismic.onPrismicError(err, req, res); return; }
+        if (docs.results[0].uid == uid) {
+          callback(docs)
+        } else res.redirect(("/" + docs.results[0].uid))
+      })
+}
+
 exports.page = prismic.route(function(req, res, ctx) {
   var id = req.params['uid']
-  ctx.api.forms('everything').ref(ctx.ref)
-    .query('[[:d = at(my.page.uid,"' + id + '")]]').submit(function(err, docs) {
-      if (err) { prismic.onPrismicError(err, req, res); return; }
-        if (docs.results[0].uid == id) {
-          var slices =  docs.results[0].getSliceZone("page.body").value
-          res.render('page', {
-            doc: docs.results[0],
-            slices: slices,
-            helpers: {
-              buildMixinName:buildMixinName
-            }
-
-          });
-        } else res.redirect(("/" + docs.results[0].uid))
-    })
+  getPage(id, ctx, res, function(docs) {
+    var slices =  docs.results[0].getSliceZone("page.body").value
+    res.render('page', {
+      doc: docs.results[0],
+      slices: slices,
+      helpers: {
+        buildMixinName:buildMixinName
+      }
+    });
+  })
 });
 
 
