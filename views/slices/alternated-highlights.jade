@@ -21,7 +21,7 @@ mixin alternatedHighlights(slice)
                         div.text-wrapper
                             h2 !{alternatedHighlight.get('title') ? alternatedHighlight.get('title').asText() : 'No title'}
                             if alternatedHighlight.get('summary')
-                                !{alternatedHighlight.get('summary').asHtml()}
+                               | !{alternatedHighlight.get('summary').asHtml()}
                             - var readMore = alternatedHighlight.get('read-more')
                             - var readMoreLabel = alternatedHighlight.get('read-more-label')
                             if readMoreLabel

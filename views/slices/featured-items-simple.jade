@@ -13,7 +13,7 @@ mixin featuredItemsSimple(slice)
                 li.col-2(data-illustration = illustrationUrl)
                     div.illustration.squared-image(style='background-image: url(' + illustration.getView("icon").url + ');')
                     h3 !{featuredItem.get('title') ? featuredItem.get('title').asText() : ''}
-                    !{featuredItem.get('summary') ? featuredItem.get('summary').asHtml() : ''}
+                    | !{featuredItem.get('summary') ? featuredItem.get('summary').asHtml() : ''}
 
                     - var readMore = featuredItem.get('read-more')
                     - var readMoreLabel = featuredItem.get('read-more-label')
