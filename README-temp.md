@@ -4,6 +4,19 @@ This application is a "batteries included", ready to use website and blog engine
 
 #### Getting started
 
+* Website Starter is a website template backed by prismic.io CMS.
+    * Create your own account and repo on prismic.io.
+    * Create the document mask of your page
+        * Setting / Document masks
+        * Create a new `mask-id` and and a `Mask label` for example `page`, `Page`
+            * For a quick start use this [sample document mask](https://gist.github.com/faresd/87cd721b71fbd62f84a9#file-page_document_mask)
+            * Modity the mask if necessary to adapt your page with the help of [Repository administrators manual](https://developers.prismic.io/documentation/repository-administrators-manual) / `Document masks`
+        * Create an instance of you document mask
+            * `Your documents` / `Write something`
+            * Choose the mask you have created
+        * Start by adding your page content `Slices` on the left side `Add a Content Slice...` (`Slides`, `Alternated Highlights`, `Section Header`, `...`)
+            * Use  details
+
 * Download the [latest release]()
 * Unzip locally or on your server
 * Modify `prismic-configuration.js` by adding your API end point by changing `apiEndpoint` and if needed `accessToken`.
@@ -12,30 +25,23 @@ This application is a "batteries included", ready to use website and blog engine
 To run it on your local machine, 2 possibilities:
 
 * In command line: 
-    * nodemon
+    * using nodemon
+      ```
+      npm install -g nodemon
+      ```
+      ```
+      nodemon app
+      ```
+      
+    * using node
       ```
       npm install
       ```
       ```
       node app
       ```
-      
-    * node
-      ```
-      npm install
-      ```
-      ```
-      node app
-      ```
-      
-      
-      
-1. Step 1
-2. Step 2
-3. Step 3
-  * Item 3a
-  * Item 3b
-  * Item 3c
+
+    
 
 Some remarks:
 
