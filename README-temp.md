@@ -1,7 +1,5 @@
 ### Prismic.io Website Starter for NodeJS (uses express and jade)
 
-This application is a "batteries included", ready to use website and blog engine. It is designed with document types similar to existing CMS like Wordpress, **blog posts** and **pages**.
-
 #### Getting started
 
 * Website Starter is a website template backed by prismic.io CMS.
