@@ -13,12 +13,20 @@ To run it on your local machine, 2 possibilities:
 
 * In command line: 
     b.nodemon
-      *npm install
-      *node app
+      ```
+      npm install
+      ```
+      ```
+      node app
+      ```
       
     a.node
-      *npm install
-      *node app
+      ```
+      npm install
+      ```
+      ```
+      node app
+      ```
       
 
 Some remarks:
