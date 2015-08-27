@@ -12,7 +12,7 @@ This application is a "batteries included", ready to use website and blog engine
 To run it on your local machine, 2 possibilities:
 
 * In command line: 
-    b.nodemon
+    * nodemon
       ```
       npm install
       ```
@@ -20,7 +20,7 @@ To run it on your local machine, 2 possibilities:
       node app
       ```
       
-    a.node
+    * node
       ```
       npm install
       ```
@@ -28,6 +28,14 @@ To run it on your local machine, 2 possibilities:
       node app
       ```
       
+      
+      
+1. Step 1
+2. Step 2
+3. Step 3
+  * Item 3a
+  * Item 3b
+  * Item 3c
 
 Some remarks:
 
