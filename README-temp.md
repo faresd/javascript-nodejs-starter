@@ -12,7 +12,7 @@ Website Starter is a website template backed by prismic.io CMS.
 
 * Create a new `mask-id` and and a `Mask label` for example `page`, `Page`
 
-For a quick start use this [sample document mask](https://gist.github.com/faresd/87cd721b71fbd62f84a9#file-page_document_mask)
+* Start with using this [sample document mask](https://gist.github.com/faresd/87cd721b71fbd62f84a9#file-page_document_mask).
 
 ##### Mask instance (document)
 
@@ -51,28 +51,29 @@ exports.Configuration = {
 
 To run it on your local machine, 2 possibilities:
 
-* In command line: 
-    * using [nodemon](https://github.com/remy/nodemon) (node wrapper)
-      ```
-      npm install -g nodemon
-      ```
-      ```
-      nodemon app
-      ```
-      
-    * using node
-      ```
-      npm install
-      ```
-      ```
-      node app
-      ```
+In command line:
+* using [nodemon](https://github.com/remy/nodemon) (node wrapper)
+```
+npm install -g nodemon
+```
+```
+nodemon app
+```
+
+* using node
+```
+npm install
+```
+```
+node app
+```
 You are all set.
 
 #### Further development
 
-This Website Starter uses [Jade - Template Engine](http://jade-lang.com/)
-To adapt design of your web site; you can modify the corresponding slice jade mixin located in: `/views/slices/`, this appication handels `Slice labels` ether by a new labeled Minxin or inline-check.
+This Website Starter uses [Jade - Template Engine](http://jade-lang.com/).
+
+To adapt the design of your web site; you can modify the corresponding slice jade mixin located in: `/views/slices/`, this appication handels `Slice labels` ether by a new labeled Minxin or inline-check.
 
 
 #### Deploy your NodeJS application
