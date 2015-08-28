@@ -22,7 +22,7 @@ Create an instance of you document mask
 * Navigate to `Your documents` / `Write something`
 * Choose the mask you have created
 * Start by adding your page content `Slices` on the left side `Add a Content Slice...` (`Slides`, `Alternated Highlights`, `Section Header`, `...`)
-* Finally add your page `unique-identifier-for-page-url` in Metadata tab (uid) and you Page meta title for example : `website-starter-sample-page`, `Website Starter Sample Page`
+* Finally add your page url `unique-identifier-for-page-url` in Metadata tab (uid) and you Page meta title for example : `website-starter-sample-page`, `Website Starter Sample Page`
 * Publish
 
 #### prismic.io Website Starter for Javascript Node.JS
@@ -72,7 +72,7 @@ You are all set.
 
 This Website Starter uses [Jade - Template Engine](http://jade-lang.com/).
 
-To adapt the design of your web site; you can modify the corresponding slice jade mixin located in: `/views/slices/`, this appication handels `Slice labels` ether by a new labeled Minxin or inline-check.
+To adapt the design of your web site; you can modify the corresponding slice jade mixin located in: `/views/slices/`, this appication handels `Slice labels` either by a new labeled Minxin or inline-check.
 
 
 #### Deploy your NodeJS application
