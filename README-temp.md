@@ -1,12 +1,13 @@
-## Prismic.io Website Starter for NodeJS (uses express and jade)
+## prismic.io Website Starter for NodeJS (uses express and jade)
 
 ### Getting started
 
 Website Starter is a website template backed by prismic.io CMS.
+#### Setting up prismic.io
 
-#### Create your own account and repo on [prismic.io](https://prismic.io/signup).
+##### Create your own account and repo on [prismic.io](https://prismic.io/signup).
 
-##### Create the document mask of your page in [Prismic.io Writing-room](https://prismic.io/tour/writing-room)
+Create the document mask of your page in prismic.io Writing-room
     
 * Navigate to `Setting` / `Document masks`
 
@@ -24,7 +25,7 @@ Create an instance of you document mask
 * Finally add your page `unique-identifier-for-page-url` in Metadata tab (uid) and you Page meta title for example : `website-starter-sample-page`, `Website Starter Sample Page`
 * Publish
 
-#### Prismic.io Website Starter for Javascript Node.JS
+#### prismic.io Website Starter for Javascript Node.JS
 
 * Download the [latest release]()
 * Unzip locally or on your server
@@ -128,7 +129,7 @@ This project is built on top of [Javascript-nodejs-starter](https://github.com/p
 
 This software is licensed under the Apache 2 license, quoted below.
 
-Copyright 2015 Prismic.io (http://www.prismic.io).
+Copyright 2015 prismic.io (http://www.prismic.io).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
