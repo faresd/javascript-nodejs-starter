@@ -6,11 +6,11 @@ Website Starter is a website template backed by prismic.io CMS.
 
 #### Create your own account and repo on [prismic.io](https://prismic.io/signup).
 
-##### Create the document mask of your page
+##### Create the document mask of your page in [Prismic.io Writing-room](https://prismic.io/tour/writing-room)
     
-Setting / Document masks
+* Navigate to `Setting` / `Document masks`
 
-Create a new `mask-id` and and a `Mask label` for example `page`, `Page`
+* Create a new `mask-id` and and a `Mask label` for example `page`, `Page`
 
 For a quick start use this [sample document mask](https://gist.github.com/faresd/87cd721b71fbd62f84a9#file-page_document_mask)
 
@@ -72,7 +72,7 @@ You are all set.
 #### Further development
 
 This Website Starter uses [Jade - Template Engine](http://jade-lang.com/)
-To adapt design of your web site; you can modify the corresponding slice mixin located in: `/views/slices/`, this appication handels `Slice labels` ether by a new labeled Minxin or inline-check.
+To adapt design of your web site; you can modify the corresponding slice jade mixin located in: `/views/slices/`, this appication handels `Slice labels` ether by a new labeled Minxin or inline-check.
 
 
 #### Deploy your NodeJS application
@@ -112,6 +112,11 @@ $ heroku open
 #### Get started with prismic.io
 
 You can find out [how to get started with prismic.io](https://developers.prismic.io/documentation/UjBaQsuvzdIHvE4D/getting-started) on our [prismic.io developer's portal](https://developers.prismic.io/).
+
+#### Modifying Masks
+
+* Modity the mask if necessary to adapt your page with the help of [Repository administrators manual](https://developers.prismic.io/documentation/repository-administrators-manual) / `Document masks`
+
 
 #### Understand the JavaScript development kit
 
@@ -156,4 +161,3 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 
-            * Modity the mask if necessary to adapt your page with the help of [Repository administrators manual](https://developers.prismic.io/documentation/repository-administrators-manual) / `Document masks`
