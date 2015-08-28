@@ -1,14 +1,12 @@
 ## Prismic.io Website Starter for NodeJS (uses express and jade)
 
-This application is a "batteries included", ready to use website. It is designed with document types similar to existing CMS like Wordpress, **blog posts** and **pages**.
-
 ### Getting started
 
 Website Starter is a website template backed by prismic.io CMS.
 
 #### Create your own account and repo on [prismic.io](https://prismic.io/signup).
 
-#### Create the document mask of your page
+##### Create the document mask of your page
     
 Setting / Document masks
 
@@ -16,20 +14,38 @@ Create a new `mask-id` and and a `Mask label` for example `page`, `Page`
 
 For a quick start use this [sample document mask](https://gist.github.com/faresd/87cd721b71fbd62f84a9#file-page_document_mask)
 
-#### Mask instance
+##### Mask instance (document)
 
 Create an instance of you document mask
 
-* `Your documents` / `Write something`
+* Navigate to `Your documents` / `Write something`
 * Choose the mask you have created
 * Start by adding your page content `Slices` on the left side `Add a Content Slice...` (`Slides`, `Alternated Highlights`, `Section Header`, `...`)
-* Finally add your page `unique-identifier-for-page-url` in Metadata tab (uid) and you Page meta title.
+* Finally add your page `unique-identifier-for-page-url` in Metadata tab (uid) and you Page meta title for example : `website-starter-sample-page`, `Website Starter Sample Page`
 * Publish
+
+#### Prismic.io Website Starter for Javascript Node.JS
 
 * Download the [latest release]()
 * Unzip locally or on your server
-* Modify `prismic-configuration.js` by adding your API end point by changing `apiEndpoint` and if needed `accessToken`.
+
+Edit the `prismic-configuration.js` file to get the application connected to the right repository:
+
+```
+exports.Configuration = {
+
+  apiEndpoint: 'https://lesbonneschoses.prismic.io/api',
+
+  // -- Access token if the Master is not open
+  // accessToken: 'xxxxxx',
+
+  // OAuth
+  // clientId: 'xxxxxx',
+  // clientSecret: 'xxxxxx',
+  ...
+```
 * That's it!
+
 
 * Install [npm & node](https://www.npmjs.com/package/npm)
 
@@ -51,10 +67,12 @@ To run it on your local machine, 2 possibilities:
       ```
       node app
       ```
+You are all set.
 
-    
+#### Further development
 
-Some remarks:
+This Website Starter uses [Jade - Template Engine](http://jade-lang.com/)
+To adapt design of your web site; you can modify the corresponding slice mixin located in: `/views/slices/`, this appication handels `Slice labels` ether by a new labeled Minxin or inline-check.
 
 
 #### Deploy your NodeJS application
@@ -99,10 +117,8 @@ You can find out [how to get started with prismic.io](https://developers.prismic
 
 You'll find more information about how to use the development kit included in this starter project, by reading [its README file](https://github.com/prismicio/javascript-kit/blob/master/README.md).
 
-### Contribute to the starter project
-
-Contribution is open to all developer levels, read our "[Contribute to the official kits](https://developers.prismic.io/documentation/UszOeAEAANUlwFpp/contribute-to-the-official-kits)" documentation to learn more.
-
+#### More about the Javascript-nodejs-starter
+This project is built on top of [Javascript-nodejs-starter](https://github.com/prismicio/javascript-nodejs-starter)
 
 #### License
 
