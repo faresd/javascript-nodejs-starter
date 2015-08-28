@@ -44,8 +44,6 @@ exports.Configuration = {
   // clientSecret: 'xxxxxx',
   ...
 ```
-* That's it!
-
 
 * Install [npm & node](https://www.npmjs.com/package/npm)
 
